@@ -1,11 +1,11 @@
+var idtoken;
+
 function onSuccess(googleUser) {
   var profile = googleUser.getBasicProfile();
-  var id_token = googleUser.getAuthResponse().id_token;
+  id_token = googleUser.getAuthResponse().id_token;
 
-  console.log('Logged in as: ' + profile.getName());
-
-  document.getElementById("profile").getElementsByTagName('img')[0].src = profile.getImageUrl();
-  document.getElementById("profile").getElementsByTagName('p')[0].innerHTML = profile.getName();
+  document.getElementById("profile-pic").src = profile.getImageUrl();
+  document.getElementById("username").innerHTML = profile.getName();
 
   var xhr = new XMLHttpRequest();
   xhr.open('POST', './tokensignin');
@@ -14,6 +14,9 @@ function onSuccess(googleUser) {
     console.log('Signed in as: ' + xhr.responseText);
   };
   xhr.send('idtoken=' + id_token);
+
+  document.getElementById("row-1").setAttribute('data-signed-in', "true");
+  updateButton();
 }
 
 function onFailure(error) {
@@ -26,7 +29,7 @@ function renderButton() {
     'width': 240,
     'height': 50,
     'longtitle': true,
-    'theme': 'dark',
+    'theme': 'light',
     'onsuccess': onSuccess,
     'onfailure': onFailure
   });
@@ -38,9 +41,23 @@ function signOut() {
     console.log('User signed out.');
   });
   resetProfileInfo();
+  document.getElementById("row-1").setAttribute('data-signed-in', "false");
+  updateButton();
 }
 
 function resetProfileInfo() {
-  document.getElementById("profile").getElementsByTagName('img')[0].src = './images/default-profile.png';
-  document.getElementById("profile").getElementsByTagName('p')[0].innerHTML = 'default name'; 
+  document.getElementById("profile-pic").src = './images/default-profile.png';
+  document.getElementById("username").innerHTML = 'default name'; 
+}
+
+function updateButton() {
+  if (document.getElementById("row-1").getAttribute('data-signed-in') == "true") {
+    document.getElementById("signin").style.display = 'none';
+    document.getElementById("profile").style.display = 'inline-block';
+    document.getElementById("row-2").style.display = 'flex';
+  } else {
+    document.getElementById("signin").style.display = 'flex';
+    document.getElementById("profile").style.display = 'none';
+    document.getElementById("row-2").style.display = 'none';
+  }
 }

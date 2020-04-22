@@ -9,15 +9,46 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="./style/general.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
     <title>Polyphasic Adaptation Tracker</title>
 </head>
 <body>
-	<div id="google-signin"></div>
-	<a href="#" onClick="signOut();">Sign Out</a>
-	<div id="profile">
-		<img src="./images/default-profile.png"/>
-		<p>default name</p>
+	<div id="page-1">
+		<div id="page-container">
+			<div data-signed-in="false" id="row-1">
+				<div id="signin">
+					<div id="signin-container">
+						<span class="header">Polyphasic Sleep Effect Tracker</span>
+						<span class="body">
+							Through this project we aim to gain a greater understanding of the health effects of polyphasic sleeping though data crowdsoucing. While current research helps inform how these schedules are designed, there is currently a lack of research on specific polyphasic schedules. For more information on the project, scroll down. Sign in below to contribute.
+						</span>
+						<div id="google-signin"></div>
+					</div>
+				</div>
+				<div style="display: none;" id="profile">
+					<div id="profile-container">
+						<img id="profile-pic" src="./images/default-profile.png"/>
+						<div id="profile-text">
+							<span id='username'></span>
+							<a href="#" onClick="signOut();">Sign Out</a><i id="profile-dropdown" class="fa fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="display: none" id="row-2">
+				<div id="start-test" class="main-button">
+					<span>Begin Test</span>
+				</div>
+				<div id="resume-test" class="main-button">
+					<span>Resume Test</span>
+				</div>
+			</div>
+		</div>
+		<i id="scroll-button" class="fa fa-angle-down"></i>
+	</div>
+	<div id="page-2">
+		
 	</div>
 	<script src="./js/signInHandler.js" type="text/javascript"></script>
 	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>

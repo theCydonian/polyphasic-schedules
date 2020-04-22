@@ -1,0 +1,155 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #EAEAEA;
+}
+
+a:hover {
+	color: white;
+}
+
+#profile {
+	display: inline-block;	
+	background-color: #FFF3;
+	padding: 10px;
+	border-radius: 10px;
+	height: 64px;
+	position: relative;
+	margin: 20px;
+}
+
+#profile-container {
+	display: flex;
+}
+
+#profile-pic {
+	display: inline-block;
+	height: 64px;
+	width:  64px;
+	border-radius: 32px;
+	margin: auto;
+}
+
+#username {
+	display: block;
+
+	font-size: 20px;
+}
+
+#profile-text {
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: auto;
+}
+
+#profile-dropdown {
+	font-size: 20px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.main-button {
+	background-color: #FFF3;
+	display: inline-block;
+	font-size: 16px;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 15px;
+	cursor: pointer;
+}
+
+#page-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+#row-1, #row-2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#signin {
+	display: inline-block;
+	width: 64%;
+}
+
+#signin-container {
+	background-color: #FFF3;
+	padding: 10px;
+	border-radius: 10px;
+
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header {
+	display: inline-block;
+	margin: auto;
+	margin-bottom: 15px;
+	margin-top: 10px;
+
+	font-size: 26px;
+}
+
+.body {
+	display: inline-block;
+	margin: auto;
+	margin-bottom: 40px;
+	width: 93.75%;
+	text-align: center;
+}
+
+#google-signin {
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+#scroll-button {
+	position: absolute;
+	bottom: 8px;
+	transform: translateY(-50%);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 36px;
+	cursor: pointer;
+	color: #DDD;
+}
+
+#scroll-button:hover {
+	color: white;
+}
+
+#page-1 {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	background: #E6DADA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#page-2 {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	background: #232526;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
