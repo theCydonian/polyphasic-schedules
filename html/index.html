@@ -36,7 +36,52 @@
 					</div>
 				</div>
 			</div>
-			<div style="display: none" id="row-2">
+			<div style="display: none;" id='resume-container'>
+				<div id="resume-memory">
+					<span class="description">Enter the words you memorized an hour ago</span>
+					<div id="word-box">
+						<input type="text" name="Words" placeholder="Type Comma Separated Words Here"></input><span id="submit-words">Submit</span>
+					</div>
+				</div>
+			</div>
+			<div data-selected="0" style="display: none;" id="test-container">
+				<div id="reaction-time">
+					<span class="description">Press space or click when green</span>
+					<div id="reaction-button"></div>
+					<span id="time-display">– ms average</span>
+				</div>
+				<div id="reaction-continue-button"></div>
+				<div style="display: none;" id="short-memory">
+					<span class="description">Memorize the numbers and type in text-box</span>
+					<div id="number-box">
+						<input type="number" name="Digits" placeholder="Type Digits Here"></input><span id="submit-numbers">Submit</span>
+						<span id="number-display"></span>
+					</div>
+					<span id="digits-display">– digits average</span>
+				</div>
+				<div id="short-memory-button"></div>
+				<div style="display: none;" id="long-memory">
+					<span class="description">Take two minutes to memorize the words and submit. Resume test within 5 minutes of an hour</span>
+					<div id="word-display">
+						<div class="word-row">
+							<span class="word">eat</span>
+							<span class="word">consume</span>
+							<span class="word">masticate</span>
+							<span class="word">chew</span>
+							<span class="word">digest</span>
+						</div>
+						<div class="word-row">
+							<span class="word">swallow</span>
+							<span class="word">dissolve</span>
+							<span class="word">drink</span>
+							<span class="word">hydrate</span>
+							<span class="word">fuel</span>
+						</div>
+					</div>
+				</div>
+				<div id="continue-button"><i class="fa fa-angle-double-right"></i></div>
+			</div>
+			<div style="display: none;" id="row-2">
 				<div id="start-test" class="main-button">
 					<span>Begin Test</span>
 				</div>
@@ -45,12 +90,15 @@
 				</div>
 			</div>
 		</div>
-		<i id="scroll-button" class="fa fa-angle-down"></i>
+		<i id="down" data-hash="#page-2" class="fa fa-angle-down"></i>
 	</div>
 	<div id="page-2">
 		
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="./js/signInHandler.js" type="text/javascript"></script>
+	<script src="./js/scrollHandler.js" type="text/javascript"></script>
+	<script src="./js/windowManager.js" type="text/javascript"></script>
 	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 </html>

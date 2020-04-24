@@ -3,6 +3,7 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 body {
@@ -120,7 +121,7 @@ a:hover {
 	margin-bottom: 10px;
 }
 
-#scroll-button {
+#down {
 	position: absolute;
 	bottom: 8px;
 	transform: translateY(-50%);
@@ -131,7 +132,7 @@ a:hover {
 	color: #DDD;
 }
 
-#scroll-button:hover {
+#down:hover {
 	color: white;
 }
 
@@ -152,4 +153,123 @@ a:hover {
 	background: #232526;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#test-container,#resume-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#reaction-time {
+	display: inline-block;
+	background-color: #FFF3;
+	padding: 10px;
+	border-radius: 10px;
+	margin: auto;
+}
+
+#short-memory,#resume-memory {
+	display: inline-block;
+	background-color: #FFF3;
+	padding: 10px;
+	border-radius: 10px;
+	margin: auto;
+}
+
+#long-memory {
+	display: inline-block;
+	background-color: #FFF3;
+	padding: 10px;
+	border-radius: 10px;
+	width: 50%;
+	margin: auto;
+}
+
+#continue-button {
+	width: 50%;
+	padding: 10px;
+	border-radius: 10px;
+	height: 30px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #FFF3;
+	display: flex;
+	cursor: pointer;
+}
+#continue-button:hover {
+	background-color: #FFFA;
+}
+
+#continue-button i {
+	margin: auto;
+	text-align: center;
+	font-size: 32px;
+}
+
+input {
+	outline: none;
+	resize: none;
+	width: 20em;
+	height: 1.5em;
+	font-size: 24px;
+	background-color: #FFF3;
+	padding: 10px;
+	border-radius: 0.75em;
+	color: white;
+	border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    margin:  10px;
+}
+
+.description {
+	font-size: 24px;
+	padding-left: 10px;
+}
+
+#digits-display, #time-display {
+	padding-left: 32px;
+}
+
+#reaction-button {
+	cursor: pointer;
+	background-color: #FFF3;
+	border-radius: 10px;
+	width: 50%;
+	height: 3em;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#reaction-button:hover {
+	background-color: #FFF;
+}
+
+#submit-numbers,#submit-words {
+	cursor: pointer;
+	background-color: #FFF3;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+}
+
+#word-display {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.word-row {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.word {
+	width: 20%;
+	text-align: center;
 }
